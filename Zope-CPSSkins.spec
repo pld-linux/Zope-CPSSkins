@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.python
 %define		zope_subname	CPSSkins
 # %%define		sub_ver	rc3
 Summary:	Theme creation and management product for CMF, Plone, CPS3
