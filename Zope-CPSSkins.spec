@@ -5,7 +5,7 @@ Summary:	Theme creation and management product for CMF, Plone, CPS3
 Summary(pl):	Kreator i zarz±dca "skórek" dla CMF, Plone, CPS3
 Name:		Zope-%{zope_subname}
 Version:	1.9
-Release:	1.%{sub_ver}.1
+Release:	1.%{sub_ver}.2
 License:	GPL
 Group:		Development/Tools
 Source0:	http://www.medic.chalmers.se/~jmo/CPS/%{zope_subname}%{version}%{sub_ver}.tgz
@@ -19,6 +19,7 @@ Requires:	Zope-CMFPlone
 Requires:	Zope-CMFPortalContentFolder
 Requires:	Zope-TranslationService
 Requires:	Zope-Localizer
+Requires:	Zope-OrderedFolderSupportPatch
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Conflicts:	CMF
