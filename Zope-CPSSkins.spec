@@ -1,5 +1,5 @@
 %define		zope_subname	CPSSkins
-%define		sub_ver	rc3
+%define		sub_ver	rc5
 Summary:	Theme creation and management product for CMF, Plone, CPS3
 Summary(pl):	Kreator i zarz±dca "skórek" dla CMF, Plone, CPS3
 Name:		Zope-%{zope_subname}
@@ -8,7 +8,7 @@ Release:	1.%{sub_ver}.0
 License:	GPL
 Group:		Development/Tools
 Source0:	http://www.medic.chalmers.se/~jmo/CPS/%{zope_subname}%{version}-%{sub_ver}.tgz
-# Source0-md5:	0af58c8a2b7b58178cd70976c6071e05
+# Source0-md5:	bfbb5e0b84c723182dad47a27f8ad05b
 URL:		http://www.medic.chalmers.se/~jmo/CPS/
 Requires(post,postun):	/usr/sbin/installzopeproduct
 %pyrequires_eq	python-modules
@@ -35,7 +35,7 @@ CPSSkins jest kreatorem i zarz±dc± "skórek" dla CMF, Plone, CPS3.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/%{name}
 
-cp -af Products/%{zope_subname}/{Extensions,Install,Misc,i18n,icons,skins,tests,zmi,*.py,*.gif,version.txt,refresh.txt} \
+cp -af Products/%{zope_subname}/{Extensions,Install,i18n,icons,skins,tests,zmi,*.py,*.gif,version.txt,refresh.txt} \
     $RPM_BUILD_ROOT%{_datadir}/%{name}
 
 %py_comp $RPM_BUILD_ROOT%{_datadir}/%{name}
@@ -62,5 +62,5 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc Products/%{zope_subname}/{doc/*,AUTHORS.TXT,COPYRIGHT.TXT,CREDITS.TXT,INSTALL.TXT,README.TXT}
+%doc Products/%{zope_subname}/{doc/*,AUTHORS.TXT,CHANGES.TXT,COPYRIGHT.TXT,CREDITS.TXT,DEPEN*.TXT,INSTALL.TXT,README.TXT,UPGRADE.TXT}
 %{_datadir}/%{name}
