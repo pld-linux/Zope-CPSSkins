@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.python
 %define		zope_subname	CPSSkins
-%define		sub_ver	b6
+%define		sub_ver	b7
 Summary:	Theme creation and management product for CMF, Plone, CPS3
 Summary(pl):	Kreator i zarz±dca "skórek" dla CMF, Plone, CPS3
 Name:		Zope-%{zope_subname}
@@ -9,7 +9,7 @@ Release:	1.%{sub_ver}.1
 License:	GPL
 Group:		Development/Tools
 Source0:	http://www.medic.chalmers.se/~jmo/CPS/%{zope_subname}%{version}%{sub_ver}.tgz
-# Source0-md5:	d6f65789408c04f0e8881dfe8d5fc477
+# Source0-md5:	a80c8dec43acedc2d26632085eb4b3a0
 URL:		http://www.medic.chalmers.se/~jmo/CPS/
 Requires(post,postun):	/usr/sbin/installzopeproduct
 %pyrequires_eq	python-modules
