@@ -11,6 +11,7 @@ Source0:	ftp://mc.ptja.pl/%{zope_subname}%{version}.tar.gz
 # Source0-md5:	2408c3693f83223922a5438756960600
 URL:		http://www.medic.chalmers.se/~jmo/CPS/
 Requires(post,postun):	/usr/sbin/installzopeproduct
+BuildRequires:	rpmbuild(macros) >= 1.268
 BuildRequires:	python
 %pyrequires_eq	python-modules
 Requires:	Zope
@@ -49,16 +50,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 /usr/sbin/installzopeproduct %{_datadir}/%{name} %{zope_subname}
-if [ -f /var/lock/subsys/zope ]; then
-	/etc/rc.d/init.d/zope restart >&2
-fi
+%service -q zope restart
 
 %postun
 if [ "$1" = "0" ]; then
 	/usr/sbin/installzopeproduct -d %{zope_subname}
-	if [ -f /var/lock/subsys/zope ]; then
-		/etc/rc.d/init.d/zope restart >&2
-	fi
+	%service -q zope restart
 fi
 
 %files
