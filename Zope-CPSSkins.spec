@@ -1,7 +1,7 @@
 %define		zope_subname	CPSSkins
 # %%define		sub_ver	rc5
 Summary:	Theme creation and management product for CMF, Plone, CPS3
-Summary(pl.UTF-8):   Kreator i zarządca "skórek" dla CMF, Plone, CPS3
+Summary(pl.UTF-8):	Kreator i zarządca "skórek" dla CMF, Plone, CPS3
 Name:		Zope-%{zope_subname}
 Version:	2.7.0
 Release:	1
